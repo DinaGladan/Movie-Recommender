@@ -13,16 +13,31 @@
 #     title = movie.get("data-film-name")
 #     print(title)
 
-# from bs4 import BeautifulSoup
-# import requests
 
-# url = "https://archive.org/details/movies"
-# page = requests.get(url)
-# soup = BeautifulSoup(page.text, "html.parser")
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
+# koristi potrebnu verziju chroma bez rucnog instaliranja
+service = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service)
+url = "https://www.imdb.com/chart/top/"
 
-# movies = soup.select("div.item-ttl a")
+driver.get(url)
 
-# for movie in movies:
-#     title = movie.text.strip()  # Uzimamo tekst linka (naziv filma)
-#     print(title)
+movies = driver.find_elements(By.CSS_SELECTOR, "li.ipc-metadata-list-summary-item")
+for movie in movies:
+    title_with_rank = movie.find_element(By.CSS_SELECTOR, "h3.ipc-title__text").text
+    movie_title = title_with_rank.split(".")[1]
+    year_and_duratin = movie.find_elements(
+        By.CSS_SELECTOR, "span.cli-title-metadata-item"
+    )
+    movie_year = year_and_duratin[0].text
+    movie_duration = year_and_duratin[1].text
+    movie_rating = movie.find_element(
+        By.CSS_SELECTOR, "span.ipc-rating-star--rating"
+    ).text
+    print(movie_rating, movie_title, movie_year, movie_duration)
+
+driver.quit()
