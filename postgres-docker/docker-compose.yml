@@ -1,12 +1,10 @@
-version: '3' 
-
 services:
   db:
     image: postgres
     environment:
       POSTGRES_PASSWORD: postgres
     volumes:
-      - C:/Users/Korisnik/Desktop/Movie recommender/postgres-data:/var/lib/postgresql/data
+      - C:/Users/Korisnik/Desktop/MovieRecommender/postgres-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
   pgadmin:
@@ -18,4 +16,18 @@ services:
       - "8080:80"
     depends_on:
       - db
-    
+  
+  app:
+    build:
+      context: ../python-image
+    volumes:
+      - ../python-image:/app
+      - ../python-image/.env:/app/.env
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: "postgresql://postgres:postgres@db:5432/movie_recommender"
+    working_dir: /app
+    command: tail -f /dev/null
+
+

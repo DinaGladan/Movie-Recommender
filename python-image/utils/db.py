@@ -6,7 +6,7 @@ import os
 # ali ga ne prepoznaje
 from dotenv import load_dotenv
 
-load_dotenv()  # ucitavamo podatke iz .env-a
+load_dotenv(dotenv_path="/app/.env")  # ucitavamo podatke iz .env-a
 
 
 def get_db_connection():
