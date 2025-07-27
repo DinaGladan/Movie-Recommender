@@ -6,10 +6,16 @@ import os
 # ali ga ne prepoznaje
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path="/app/.env")  # ucitavamo podatke iz .env-a
+load_dotenv(dotenv_path="/app/.env")
+# ucitavamo podatke iz .env-a
+
+# # DEBUG:
+# print("ENV VAR check:")
+# print("DB_HOST:", os.getenv("DB_HOST"))
 
 
 def get_db_connection():
+
     try:
         conn = psycopg2.connect(
             host=os.getenv("DB_HOST"),
