@@ -2,9 +2,12 @@ services:
   db:
     image: postgres
     environment:
+      POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: movie_recommender
     volumes:
-      - C:/Users/Korisnik/Desktop/MovieRecommender/postgres-data:/var/lib/postgresql/data
+      - C:/Users/Korisnik/Desktop/MovieRecommender/Movie-Recommender/postgres-data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5432:5432"
   pgadmin:
