@@ -21,6 +21,11 @@ CREATE TABLE IF NOT EXISTS directors (
     name VARCHAR(255)
 );
 
+CREATE TABLE IF NOT EXISTS writers (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255)
+);
+
 CREATE TABLE IF NOT EXISTS movie_genre(
     movie_id INT,
     genre_id INT,
@@ -43,5 +48,13 @@ CREATE TABLE IF NOT EXISTS movie_director(
     PRIMARY KEY (movie_id, director_id),
     FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE,
     FOREIGN KEY (director_id) REFERENCES directors(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS movie_writer(
+    movie_id INT,
+    writer_id INT,
+    PRIMARY KEY (movie_id, writer_id),
+    FOREIGN KEY (movie_id) REFERENCES movies(id) ON DELETE CASCADE,
+    FOREIGN KEY (writer_id) REFERENCES writers(id) ON DELETE CASCADE
 );
 
