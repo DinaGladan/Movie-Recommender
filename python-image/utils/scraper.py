@@ -201,7 +201,9 @@ for movie in movies:
                     )
                     # print(casts)
 
-                    for cast in casts:
+                    for i, cast in enumerate(casts):
+                        if i >= 10:
+                            break
                         actor_link = cast.find_element(
                             By.CSS_SELECTOR, "a.name-credits--title-text"
                         )
