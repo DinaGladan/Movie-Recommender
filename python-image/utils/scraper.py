@@ -62,16 +62,23 @@ for movie in movies:
 
         cur.execute(
             """
-                INSERT INTO movies (title, year, duration, rating)
-                VALUES (%s, %s, %s, %s) RETURNING id
+                SELECT id FROM movies WHERE title = %s AND year = %s
             """,
-            (movie_title, movie_year, movie_duration, movie_rating),
+            (movie_title, movie_year),
         )
-        movie_id_result = cur.fetchone()
-        if movie_id_result is None:
-            print(f"Nešto nije u redu s filmom: {movie_title}")
-            continue
-        movie_id = movie_id_result[0]
+        result = cur.fetchone()
+
+        if not result:
+            cur.execute(
+                """
+                    INSERT INTO movies (title, year, duration, rating)
+                    VALUES (%s, %s, %s, %s) RETURNING id
+                """,
+                (movie_title, movie_year, movie_duration, movie_rating),
+            )
+            movie_id = cur.fetchone()[0]
+        else:
+            movie_id = result[0]
 
         driver.execute_script("window.open('');")  # otvori novi prozor
         driver.switch_to.window(driver.window_handles[1])  # prebaci se na njega
