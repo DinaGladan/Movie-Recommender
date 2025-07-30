@@ -15,6 +15,8 @@
 
 # bolji za stranice koje su automatizirane, dinamicne i koriste se JSom
 import time
+import json
+import traceback
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -43,6 +45,7 @@ conn = get_db_connection()
 cur = conn.cursor()
 
 movies = driver.find_elements(By.CSS_SELECTOR, "li.ipc-metadata-list-summary-item")
+movies_data = []
 # print(f"Br pronadjenih {len(movies)}")
 for movie in movies:
     try:
@@ -60,30 +63,86 @@ for movie in movies:
         movie_link = movie.find_element(By.TAG_NAME, "a").get_attribute("href")
         # print(f"{movie_link}")
 
-        cur.execute(
-            """
-                SELECT id FROM movies WHERE title = %s AND year = %s
-            """,
-            (movie_title, movie_year),
-        )
-        result = cur.fetchone()
-
-        if not result:
-            cur.execute(
-                """
-                    INSERT INTO movies (title, year, duration, rating)
-                    VALUES (%s, %s, %s, %s) RETURNING id
-                """,
-                (movie_title, movie_year, movie_duration, movie_rating),
-            )
-            movie_id = cur.fetchone()[0]
-        else:
-            movie_id = result[0]
+        # Provjeri postoji li već taj film
+        # try:
+        #     cur.execute(
+        #         """
+        #             SELECT id FROM movies
+        #             WHERE title = %s AND year = %s
+        #         """,
+        #         (movie_title, movie_year),
+        #     )
+        movie_result = None
+        # except Exception as e:
+        #     print(f"Greška kod SELECT movies: {e}")
+        #     conn.rollback()
+        #     continue
 
         driver.execute_script("window.open('');")  # otvori novi prozor
         driver.switch_to.window(driver.window_handles[1])  # prebaci se na njega
         driver.get(movie_link)  # otvori stranicu filma u njemu
         time.sleep(2)
+
+        rating_element = driver.find_element(
+            # ???
+            By.XPATH,
+            "//li[@class='ipc-inline-list__item']/a[contains(@href, 'parental')]",
+        )
+        content_rating = rating_element.text.strip()
+        time.sleep(1)
+        print(content_rating)
+
+        number_of_users_reviews = driver.find_element(
+            By.XPATH,
+            "//span[@class='label' and contains(text(), 'User reviews')]/preceding-sibling::span[@class='score']",
+        ).text.strip()
+        print(f"Number of users reviews: {number_of_users_reviews}")
+        time.sleep(1)
+
+        number_of_critic_reviews = driver.find_element(
+            By.XPATH,
+            "//span[@class='label' and contains(text(), 'Critic reviews')]/preceding-sibling::span[@class='score']",
+        ).text.strip()
+        print(f"Number of critic reviews: {number_of_critic_reviews}")
+        time.sleep(1)
+
+        if movie_result is None:
+            # ne postoji pa ga unesi
+            # mislim da se ode lomi
+            cur.execute(
+                """
+                    INSERT INTO movies (title, year, duration, rating, content_rating, number_of_users_reviews, number_of_critic_reviews)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id
+                """,
+                (
+                    movie_title,
+                    movie_year,
+                    movie_duration,
+                    movie_rating,
+                    content_rating,
+                    number_of_users_reviews,
+                    number_of_critic_reviews,
+                ),
+            )
+            movie_id = cur.fetchone()[0]
+        else:
+            movie_id = movie_result[0]
+            cur.execute(
+                """
+                UPDATE movies
+                SET content_rating = %s,
+                    number_of_users_reviews = %s,
+                    number_of_critic_reviews = %s
+                WHERE id = %s
+                """,
+                (
+                    content_rating,
+                    number_of_users_reviews,
+                    number_of_critic_reviews,
+                    movie_id,
+                ),
+            )
+
         # genre_elements = driver.find_elements(By.CSS_SELECTOR, "span.ipc-chip__text")
         # detaljnije
         genre_elements = driver.find_elements(
@@ -115,8 +174,13 @@ for movie in movies:
                 """,
                 (movie_id, genre_id),
             )
+            time.sleep(1)
             # print(f"{movie_id} {genre_id}")
 
+        directors = []
+        writers = []
+        actors = []
+        time.sleep(1)
         sections = driver.find_elements(By.CSS_SELECTOR, "li.ipc-metadata-list__item")
         for section in sections:
             try:
@@ -134,6 +198,7 @@ for movie in movies:
                 # print(label)
                 # print(names)
                 if "director" in label:
+                    directors = names
                     for name in names:
                         cur.execute(
                             """
@@ -163,6 +228,7 @@ for movie in movies:
                         )
                         # print(f" Direktor {movie_id} {director_id}")
                 elif "writer" in label:
+                    writers = names
                     for name in names:
                         cur.execute(
                             """
@@ -192,13 +258,13 @@ for movie in movies:
                         )
                         # print(f"Pisac {movie_id} {writer_id}")
 
-                if "star" in label:
+                elif "star" in label:
                     full_cast_link = driver.find_element(
                         By.CSS_SELECTOR, "a[aria-label='See full cast and crew']"
                     ).get_attribute("href")
                     driver.execute_script("window.open('');")
                     driver.switch_to.window(driver.window_handles[2])
-                    print(full_cast_link)
+                    # print(full_cast_link)
                     driver.get(full_cast_link)
                     time.sleep(1)
 
@@ -254,15 +320,30 @@ for movie in movies:
                 print(f"Greska unutra : {e}")
                 break
 
+        movie_data = {
+            "title": movie_title,
+            "year": movie_year,
+            "duration": movie_duration,
+            "rating": movie_rating,
+            "genres": genres,
+            "directors": directors,
+            "writers": writers,
+            "actors": actors,
+            "link": movie_link,
+        }
+
+        movies_data.append(movie_data)
+
         driver.close()  # zatvori taj novi tab
         driver.switch_to.window(driver.window_handles[0])  # vrati se na glavnu
         time.sleep(1)
 
     except Exception as er:
-        import traceback
-
         print("Doslo je do greške:")
         traceback.print_exc()
+
+with open("movies.json", "w", encoding="utf-8") as file:
+    json.dump(movies_data, file, indent=4)
 
 
 conn.commit()

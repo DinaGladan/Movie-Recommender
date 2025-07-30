@@ -3,7 +3,10 @@ CREATE TABLE IF NOT EXISTS movies (
     title VARCHAR(255),
     year VARCHAR(10),
     duration VARCHAR(20),
-    rating VARCHAR(10)
+    rating VARCHAR(10),
+    content_rating VARCHAR(10),
+    number_of_users_reviews VARCHAR(20),
+    number_of_critic_reviews VARCHAR(20),
 );
 
 CREATE TABLE IF NOT EXISTS genres (
