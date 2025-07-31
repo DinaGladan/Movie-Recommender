@@ -1,1 +1,1674 @@
-[]
+[
+    {
+        "title": " The Shawshank Redemption",
+        "year": "1994",
+        "duration": "2h 22m",
+        "rating": "9.3",
+        "genres": [
+            "Epic",
+            "Period Drama",
+            "Prison Drama",
+            "Drama"
+        ],
+        "directors": [
+            "Frank Darabont"
+        ],
+        "writers": [
+            "Stephen King",
+            "Frank Darabont"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0111161/?ref_=chttp_i_1"
+    },
+    {
+        "title": " The Godfather",
+        "year": "1972",
+        "duration": "2h 55m",
+        "rating": "9.2",
+        "genres": [
+            "Epic",
+            "Gangster",
+            "Tragedy",
+            "Crime",
+            "Drama"
+        ],
+        "directors": [
+            "Francis Ford Coppola"
+        ],
+        "writers": [
+            "Writers",
+            "Mario Puzo",
+            "Francis Ford Coppola"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0068646/?ref_=chttp_i_2"
+    },
+    {
+        "title": " The Dark Knight",
+        "year": "2008",
+        "duration": "2h 32m",
+        "rating": "9.1",
+        "genres": [
+            "Action Epic",
+            "Epic",
+            "Superhero",
+            "Tragedy",
+            "Action",
+            "Crime",
+            "Drama",
+            "Thriller"
+        ],
+        "directors": [
+            "Christopher Nolan"
+        ],
+        "writers": [
+            "Writers",
+            "Jonathan Nolan",
+            "Christopher Nolan",
+            "David S. Goyer"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0468569/?ref_=chttp_i_3"
+    },
+    {
+        "title": " The Godfather Part II",
+        "year": "1974",
+        "duration": "3h 22m",
+        "rating": "9.0",
+        "genres": [
+            "Epic",
+            "Gangster",
+            "Tragedy",
+            "Crime",
+            "Drama"
+        ],
+        "directors": [
+            "Francis Ford Coppola"
+        ],
+        "writers": [
+            "Writers",
+            "Francis Ford Coppola",
+            "Mario Puzo"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0071562/?ref_=chttp_i_4"
+    },
+    {
+        "title": " 12 Angry Men",
+        "year": "1957",
+        "duration": "1h 36m",
+        "rating": "9.0",
+        "genres": [
+            "Legal Drama",
+            "Psychological Drama",
+            "Crime",
+            "Drama"
+        ],
+        "directors": [
+            "Sidney Lumet"
+        ],
+        "writers": [
+            "Writer",
+            "Reginald Rose"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0050083/?ref_=chttp_i_5"
+    },
+    {
+        "title": " The Lord of the Rings: The Return of the King",
+        "year": "2003",
+        "duration": "3h 21m",
+        "rating": "9.0",
+        "genres": [
+            "Action Epic",
+            "Adventure Epic",
+            "Epic",
+            "Fantasy Epic",
+            "Mountain Adventure",
+            "Quest",
+            "Sword & Sorcery",
+            "Tragedy",
+            "Adventure",
+            "Drama"
+        ],
+        "directors": [
+            "Peter Jackson"
+        ],
+        "writers": [
+            "Writers",
+            "J.R.R. Tolkien",
+            "Fran Walsh",
+            "Philippa Boyens"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0167260/?ref_=chttp_i_6"
+    },
+    {
+        "title": " Schindler's List",
+        "year": "1993",
+        "duration": "3h 15m",
+        "rating": "9.0",
+        "genres": [
+            "Docudrama",
+            "Epic",
+            "Historical Epic",
+            "Period Drama",
+            "Prison Drama",
+            "Tragedy",
+            "Biography",
+            "Drama",
+            "History"
+        ],
+        "directors": [
+            "Steven Spielberg"
+        ],
+        "writers": [
+            "Thomas Keneally",
+            "Steven Zaillian"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0108052/?ref_=chttp_i_7"
+    },
+    {
+        "title": " Pulp Fiction",
+        "year": "1994",
+        "duration": "2h 34m",
+        "rating": "8.8",
+        "genres": [
+            "Dark Comedy",
+            "Drug Crime",
+            "Gangster",
+            "Crime",
+            "Drama"
+        ],
+        "directors": [
+            "Quentin Tarantino"
+        ],
+        "writers": [
+            "Writers",
+            "Quentin Tarantino",
+            "Roger Avary"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0110912/?ref_=chttp_i_8"
+    },
+    {
+        "title": " The Lord of the Rings: The Fellowship of the Ring",
+        "year": "2001",
+        "duration": "2h 58m",
+        "rating": "8.9",
+        "genres": [
+            "Action Epic",
+            "Adventure Epic",
+            "Dark Fantasy",
+            "Epic",
+            "Fantasy Epic",
+            "Quest",
+            "Sword & Sorcery",
+            "Adventure",
+            "Drama",
+            "Fantasy"
+        ],
+        "directors": [
+            "Peter Jackson"
+        ],
+        "writers": [
+            "Writers",
+            "J.R.R. Tolkien",
+            "Fran Walsh",
+            "Philippa Boyens"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0120737/?ref_=chttp_i_9"
+    },
+    {
+        "title": " The Good, the Bad and the Ugly",
+        "year": "1966",
+        "duration": "2h 58m",
+        "rating": "8.8",
+        "genres": [
+            "Action Epic",
+            "Adventure Epic",
+            "Dark Comedy",
+            "Desert Adventure",
+            "Epic",
+            "Period Drama",
+            "Quest",
+            "Spaghetti Western",
+            "Western Epic",
+            "Adventure"
+        ],
+        "directors": [
+            "Sergio Leone"
+        ],
+        "writers": [
+            "Writers",
+            "Luciano Vincenzoni",
+            "Sergio Leone",
+            "Agenore Incrocci"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0060196/?ref_=chttp_i_10"
+    },
+    {
+        "title": " Forrest Gump",
+        "year": "1994",
+        "duration": "2h 22m",
+        "rating": "8.8",
+        "genres": [
+            "Epic",
+            "Drama",
+            "Romance"
+        ],
+        "directors": [
+            "Robert Zemeckis"
+        ],
+        "writers": [
+            "Winston Groom",
+            "Eric Roth"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0109830/?ref_=chttp_i_11"
+    },
+    {
+        "title": " The Lord of the Rings: The Two Towers",
+        "year": "2002",
+        "duration": "2h 59m",
+        "rating": "8.8",
+        "genres": [
+            "Action Epic",
+            "Adventure Epic",
+            "Dark Fantasy",
+            "Epic",
+            "Fantasy Epic",
+            "Quest",
+            "Sword & Sorcery",
+            "Adventure",
+            "Drama",
+            "Fantasy"
+        ],
+        "directors": [
+            "Peter Jackson"
+        ],
+        "writers": [
+            "Writers",
+            "J.R.R. Tolkien",
+            "Fran Walsh",
+            "Philippa Boyens"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0167261/?ref_=chttp_i_12"
+    },
+    {
+        "title": " Fight Club",
+        "year": "1999",
+        "duration": "2h 19m",
+        "rating": "8.8",
+        "genres": [
+            "Dark Comedy",
+            "Psychological Drama",
+            "Psychological Thriller",
+            "Workplace Drama",
+            "Crime",
+            "Drama",
+            "Thriller"
+        ],
+        "directors": [
+            "David Fincher"
+        ],
+        "writers": [
+            "Chuck Palahniuk",
+            "Jim Uhls"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0137523/?ref_=chttp_i_13"
+    },
+    {
+        "title": " Inception",
+        "year": "2010",
+        "duration": "2h 28m",
+        "rating": "8.8",
+        "genres": [
+            "Action Epic",
+            "Adventure Epic",
+            "Epic",
+            "Psychological Thriller",
+            "Sci-Fi Epic",
+            "Action",
+            "Adventure",
+            "Sci-Fi",
+            "Thriller"
+        ],
+        "directors": [
+            "Christopher Nolan"
+        ],
+        "writers": [
+            "Christopher Nolan"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt1375666/?ref_=chttp_i_14"
+    },
+    {
+        "title": " Star Wars: Episode V - The Empire Strikes Back",
+        "year": "1980",
+        "duration": "2h 4m",
+        "rating": "8.7",
+        "genres": [
+            "Action Epic",
+            "Adventure Epic",
+            "Dark Fantasy",
+            "Dystopian Sci-Fi",
+            "Epic",
+            "Fantasy Epic",
+            "Quest",
+            "Sci-Fi Epic",
+            "Space Sci-Fi",
+            "Sword & Sorcery"
+        ],
+        "directors": [
+            "Irvin Kershner"
+        ],
+        "writers": [
+            "Leigh Brackett",
+            "Lawrence Kasdan",
+            "George Lucas"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0080684/?ref_=chttp_i_15"
+    },
+    {
+        "title": " The Matrix",
+        "year": "1999",
+        "duration": "2h 16m",
+        "rating": "8.7",
+        "genres": [
+            "Action Epic",
+            "Artificial Intelligence",
+            "Cyberpunk",
+            "Dystopian Sci-Fi",
+            "Gun Fu",
+            "Martial Arts",
+            "Sci-Fi Epic",
+            "Action",
+            "Sci-Fi"
+        ],
+        "directors": [
+            "Lana Wachowski",
+            "Lilly Wachowski"
+        ],
+        "writers": [
+            "Lilly Wachowski",
+            "Lana Wachowski"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0133093/?ref_=chttp_i_16"
+    },
+    {
+        "title": " Goodfellas",
+        "year": "1990",
+        "duration": "2h 25m",
+        "rating": "8.7",
+        "genres": [
+            "Docudrama",
+            "Gangster",
+            "True Crime",
+            "Biography",
+            "Crime",
+            "Drama"
+        ],
+        "directors": [
+            "Martin Scorsese"
+        ],
+        "writers": [
+            "Writers",
+            "Nicholas Pileggi",
+            "Martin Scorsese"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0099685/?ref_=chttp_i_17"
+    },
+    {
+        "title": " Interstellar",
+        "year": "2014",
+        "duration": "2h 49m",
+        "rating": "8.7",
+        "genres": [
+            "Adventure Epic",
+            "Epic",
+            "Psychological Drama",
+            "Quest",
+            "Sci-Fi Epic",
+            "Space Sci-Fi",
+            "Time Travel",
+            "Adventure",
+            "Drama",
+            "Sci-Fi"
+        ],
+        "directors": [
+            "Christopher Nolan"
+        ],
+        "writers": [
+            "Jonathan Nolan",
+            "Christopher Nolan"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0816692/?ref_=chttp_i_18"
+    },
+    {
+        "title": " One Flew Over the Cuckoo's Nest",
+        "year": "1975",
+        "duration": "2h 13m",
+        "rating": "8.7",
+        "genres": [
+            "Medical Drama",
+            "Psychological Drama",
+            "Drama"
+        ],
+        "directors": [
+            "Milos Forman"
+        ],
+        "writers": [
+            "Writers",
+            "Lawrence Hauben",
+            "Bo Goldman",
+            "Ken Kesey"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0073486/?ref_=chttp_i_19"
+    },
+    {
+        "title": " Se7en",
+        "year": "1995",
+        "duration": "2h 7m",
+        "rating": "8.6",
+        "genres": [
+            "Cop Drama",
+            "Hard-boiled Detective",
+            "Police Procedural",
+            "Psychological Drama",
+            "Psychological Thriller",
+            "Serial Killer",
+            "Tragedy",
+            "Crime",
+            "Drama",
+            "Mystery"
+        ],
+        "directors": [
+            "David Fincher"
+        ],
+        "writers": [
+            "Andrew Kevin Walker"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0114369/?ref_=chttp_i_20"
+    },
+    {
+        "title": " It's a Wonderful Life",
+        "year": "1946",
+        "duration": "2h 10m",
+        "rating": "8.6",
+        "genres": [
+            "Feel-Good Romance",
+            "Holiday Family",
+            "Holiday Romance",
+            "Psychological Drama",
+            "Supernatural Fantasy",
+            "Drama",
+            "Family",
+            "Fantasy",
+            "Holiday",
+            "Romance"
+        ],
+        "directors": [
+            "Frank Capra"
+        ],
+        "writers": [
+            "Writers",
+            "Frances Goodrich",
+            "Albert Hackett",
+            "Frank Capra"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0038650/?ref_=chttp_i_21"
+    },
+    {
+        "title": " The Silence of the Lambs",
+        "year": "1991",
+        "duration": "1h 58m",
+        "rating": "8.6",
+        "genres": [
+            "Police Procedural",
+            "Psychological Drama",
+            "Psychological Horror",
+            "Psychological Thriller",
+            "Serial Killer",
+            "Crime",
+            "Drama",
+            "Horror",
+            "Thriller"
+        ],
+        "directors": [
+            "Jonathan Demme"
+        ],
+        "writers": [
+            "Thomas Harris",
+            "Ted Tally"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0102926/?ref_=chttp_i_22"
+    },
+    {
+        "title": " Seven Samurai",
+        "year": "1954",
+        "duration": "3h 27m",
+        "rating": "8.6",
+        "genres": [
+            "Action Epic",
+            "Epic",
+            "Period Drama",
+            "Samurai",
+            "Action",
+            "Drama"
+        ],
+        "directors": [
+            "Akira Kurosawa"
+        ],
+        "writers": [
+            "Akira Kurosawa",
+            "Shinobu Hashimoto",
+            "Hideo Oguni"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0047478/?ref_=chttp_i_23"
+    },
+    {
+        "title": " Saving Private Ryan",
+        "year": "1998",
+        "duration": "2h 49m",
+        "rating": "8.6",
+        "genres": [
+            "Epic",
+            "Period Drama",
+            "War Epic",
+            "Drama",
+            "War"
+        ],
+        "directors": [
+            "Steven Spielberg"
+        ],
+        "writers": [
+            "Robert Rodat"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0120815/?ref_=chttp_i_24"
+    },
+    {
+        "title": " The Green Mile",
+        "year": "1999",
+        "duration": "3h 9m",
+        "rating": "8.6",
+        "genres": [
+            "Period Drama",
+            "Prison Drama",
+            "Supernatural Fantasy",
+            "Tragedy",
+            "Crime",
+            "Drama",
+            "Fantasy",
+            "Mystery"
+        ],
+        "directors": [
+            "Frank Darabont"
+        ],
+        "writers": [
+            "Stephen King",
+            "Frank Darabont"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0120689/?ref_=chttp_i_25"
+    },
+    {
+        "title": " City of God",
+        "year": "2002",
+        "duration": "2h 10m",
+        "rating": "8.6",
+        "genres": [
+            "Caper",
+            "Coming-of-Age",
+            "Gangster",
+            "Crime",
+            "Drama"
+        ],
+        "directors": [
+            "Fernando Meirelles",
+            "K\u00e1tia Lund"
+        ],
+        "writers": [
+            "Br\u00e1ulio Mantovani",
+            "Paulo Lins"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0317248/?ref_=chttp_i_26"
+    },
+    {
+        "title": " Life Is Beautiful",
+        "year": "1997",
+        "duration": "1h 56m",
+        "rating": "8.6",
+        "genres": [
+            "Period Drama",
+            "Psychological Drama",
+            "Romantic Comedy",
+            "Tragedy",
+            "Tragic Romance",
+            "Comedy",
+            "Drama",
+            "Romance",
+            "War"
+        ],
+        "directors": [
+            "Roberto Benigni"
+        ],
+        "writers": [
+            "Writers",
+            "Vincenzo Cerami",
+            "Roberto Benigni"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0118799/?ref_=chttp_i_27"
+    },
+    {
+        "title": " Terminator 2: Judgment Day",
+        "year": "1991",
+        "duration": "2h 17m",
+        "rating": "8.6",
+        "genres": [
+            "Action Epic",
+            "Artificial Intelligence",
+            "Cyberpunk",
+            "Dystopian Sci-Fi",
+            "Sci-Fi Epic",
+            "Time Travel",
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+        ],
+        "directors": [
+            "James Cameron"
+        ],
+        "writers": [
+            "James Cameron",
+            "William Wisher"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0103064/?ref_=chttp_i_28"
+    },
+    {
+        "title": " Star Wars: Episode IV - A New Hope",
+        "year": "1977",
+        "duration": "2h 1m",
+        "rating": "8.6",
+        "genres": [
+            "Action Epic",
+            "Adventure Epic",
+            "Dystopian Sci-Fi",
+            "Epic",
+            "Fantasy Epic",
+            "Quest",
+            "Sci-Fi Epic",
+            "Space Sci-Fi",
+            "Sword & Sorcery",
+            "Action"
+        ],
+        "directors": [
+            "George Lucas"
+        ],
+        "writers": [
+            "George Lucas"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0076759/?ref_=chttp_i_29"
+    },
+    {
+        "title": " Back to the Future",
+        "year": "1985",
+        "duration": "1h 56m",
+        "rating": "8.5",
+        "genres": [
+            "High-Concept Comedy",
+            "Teen Adventure",
+            "Teen Comedy",
+            "Time Travel",
+            "Urban Adventure",
+            "Adventure",
+            "Comedy",
+            "Sci-Fi"
+        ],
+        "directors": [
+            "Robert Zemeckis"
+        ],
+        "writers": [
+            "Robert Zemeckis",
+            "Bob Gale"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0088763/?ref_=chttp_i_30"
+    },
+    {
+        "title": " Spirited Away",
+        "year": "2001",
+        "duration": "2h 4m",
+        "rating": "8.6",
+        "genres": [
+            "Anime",
+            "Coming-of-Age",
+            "Fairy Tale",
+            "Hand-Drawn Animation",
+            "Quest",
+            "Supernatural Fantasy",
+            "Adventure",
+            "Animation",
+            "Family",
+            "Fantasy"
+        ],
+        "directors": [
+            "Hayao Miyazaki"
+        ],
+        "writers": [
+            "Writer",
+            "Hayao Miyazaki"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0245429/?ref_=chttp_i_31"
+    },
+    {
+        "title": " The Pianist",
+        "year": "2002",
+        "duration": "2h 30m",
+        "rating": "8.5",
+        "genres": [
+            "Docudrama",
+            "Epic",
+            "Period Drama",
+            "Tragedy",
+            "War Epic",
+            "Biography",
+            "Drama",
+            "Music",
+            "War"
+        ],
+        "directors": [
+            "Roman Polanski"
+        ],
+        "writers": [
+            "Ronald Harwood",
+            "Wladyslaw Szpilman"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0253474/?ref_=chttp_i_32"
+    },
+    {
+        "title": " Gladiator",
+        "year": "2000",
+        "duration": "2h 35m",
+        "rating": "8.5",
+        "genres": [
+            "Action Epic",
+            "Adventure Epic",
+            "Epic",
+            "Period Drama",
+            "Sword & Sandal",
+            "Action",
+            "Adventure",
+            "Drama"
+        ],
+        "directors": [
+            "Ridley Scott"
+        ],
+        "writers": [
+            "Writers",
+            "David Franzoni",
+            "John Logan",
+            "William Nicholson"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0172495/?ref_=chttp_i_33"
+    },
+    {
+        "title": " Parasite",
+        "year": "2019",
+        "duration": "2h 12m",
+        "rating": "8.5",
+        "genres": [
+            "Dark Comedy",
+            "Psychological Drama",
+            "Psychological Thriller",
+            "Tragedy",
+            "Drama",
+            "Thriller"
+        ],
+        "directors": [
+            "Bong Joon Ho"
+        ],
+        "writers": [
+            "Writers",
+            "Bong Joon Ho",
+            "Han Jin-won"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt6751668/?ref_=chttp_i_34"
+    },
+    {
+        "title": " Psycho",
+        "year": "1960",
+        "duration": "1h 49m",
+        "rating": "8.5",
+        "genres": [
+            "Dark Comedy",
+            "Psychological Horror",
+            "Psychological Thriller",
+            "Slasher Horror",
+            "Suspense Mystery",
+            "Drama",
+            "Horror",
+            "Mystery",
+            "Thriller"
+        ],
+        "directors": [
+            "Alfred Hitchcock"
+        ],
+        "writers": [
+            "Joseph Stefano",
+            "Robert Bloch"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0054215/?ref_=chttp_i_35"
+    },
+    {
+        "title": " The Lion King",
+        "year": "1994",
+        "duration": "1h 28m",
+        "rating": "8.5",
+        "genres": [
+            "Animal Adventure",
+            "Coming-of-Age",
+            "Hand-Drawn Animation",
+            "Jungle Adventure",
+            "Adventure",
+            "Animation",
+            "Drama",
+            "Family",
+            "Musical"
+        ],
+        "directors": [
+            "Roger Allers",
+            "Rob Minkoff"
+        ],
+        "writers": [
+            "Writers",
+            "Irene Mecchi",
+            "Jonathan Roberts",
+            "Linda Woolverton"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0110357/?ref_=chttp_i_36"
+    },
+    {
+        "title": " Grave of the Fireflies",
+        "year": "1988",
+        "duration": "1h 28m",
+        "rating": "8.5",
+        "genres": [
+            "Adult Animation",
+            "Anime",
+            "Hand-Drawn Animation",
+            "Period Drama",
+            "Tragedy",
+            "Animation",
+            "Drama",
+            "War"
+        ],
+        "directors": [
+            "Isao Takahata"
+        ],
+        "writers": [
+            "Akiyuki Nosaka",
+            "Isao Takahata"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0095327/?ref_=chttp_i_37"
+    },
+    {
+        "title": " The Departed",
+        "year": "2006",
+        "duration": "2h 31m",
+        "rating": "8.5",
+        "genres": [
+            "Cop Drama",
+            "Epic",
+            "Gangster",
+            "Crime",
+            "Drama",
+            "Thriller"
+        ],
+        "directors": [
+            "Martin Scorsese"
+        ],
+        "writers": [
+            "William Monahan",
+            "Alan Mak",
+            "Felix Chong"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0407887/?ref_=chttp_i_38"
+    },
+    {
+        "title": " Whiplash",
+        "year": "2014",
+        "duration": "1h 46m",
+        "rating": "8.5",
+        "genres": [
+            "Psychological Drama",
+            "Drama",
+            "Music"
+        ],
+        "directors": [
+            "Damien Chazelle"
+        ],
+        "writers": [
+            "Damien Chazelle"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt2582802/?ref_=chttp_i_39"
+    },
+    {
+        "title": " Harakiri",
+        "year": "1962",
+        "duration": "2h 13m",
+        "rating": "8.6",
+        "genres": [
+            "Period Drama",
+            "Drama",
+            "Mystery"
+        ],
+        "directors": [
+            "Masaki Kobayashi"
+        ],
+        "writers": [
+            "Yasuhiko Takiguchi",
+            "Shinobu Hashimoto"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0056058/?ref_=chttp_i_40"
+    },
+    {
+        "title": " The Prestige",
+        "year": "2006",
+        "duration": "2h 10m",
+        "rating": "8.5",
+        "genres": [
+            "Period Drama",
+            "Steampunk",
+            "Tragedy",
+            "Drama",
+            "Mystery",
+            "Sci-Fi",
+            "Thriller"
+        ],
+        "directors": [
+            "Christopher Nolan"
+        ],
+        "writers": [
+            "Jonathan Nolan",
+            "Christopher Nolan",
+            "Christopher Priest"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0482571/?ref_=chttp_i_41"
+    },
+    {
+        "title": " American History X",
+        "year": "1998",
+        "duration": "1h 59m",
+        "rating": "8.5",
+        "genres": [
+            "Prison Drama",
+            "Psychological Drama",
+            "Tragedy",
+            "Crime",
+            "Drama"
+        ],
+        "directors": [
+            "Tony Kaye"
+        ],
+        "writers": [
+            "David McKenna"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0120586/?ref_=chttp_i_42"
+    },
+    {
+        "title": " L\u00e9on: The Professional",
+        "year": "1994",
+        "duration": "1h 50m",
+        "rating": "8.5",
+        "genres": [
+            "Gangster",
+            "One-Person Army Action",
+            "Action",
+            "Crime",
+            "Drama",
+            "Thriller"
+        ],
+        "directors": [
+            "Luc Besson"
+        ],
+        "writers": [
+            "Luc Besson"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0110413/?ref_=chttp_i_43"
+    },
+    {
+        "title": " Spider-Man: Across the Spider-Verse",
+        "year": "2023",
+        "duration": "2h 20m",
+        "rating": "8.5",
+        "genres": [
+            "Computer Animation",
+            "Superhero",
+            "Supernatural Fantasy",
+            "Teen Adventure",
+            "Urban Adventure",
+            "Action",
+            "Adventure",
+            "Animation",
+            "Family",
+            "Fantasy"
+        ],
+        "directors": [
+            "Joaquim Dos Santos",
+            "Kemp Powers",
+            "Justin K. Thompson"
+        ],
+        "writers": [
+            "Phil Lord",
+            "Christopher Miller",
+            "Dave Callaham"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt9362722/?ref_=chttp_i_44"
+    },
+    {
+        "title": " Casablanca",
+        "year": "1942",
+        "duration": "1h 42m",
+        "rating": "8.5",
+        "genres": [
+            "Psychological Drama",
+            "Drama",
+            "Romance",
+            "War"
+        ],
+        "directors": [
+            "Michael Curtiz"
+        ],
+        "writers": [
+            "Writers",
+            "Philip G. Epstein",
+            "Julius J. Epstein",
+            "Howard Koch"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0034583/?ref_=chttp_i_45"
+    },
+    {
+        "title": " Cinema Paradiso",
+        "year": "1988",
+        "duration": "2h 54m",
+        "rating": "8.5",
+        "genres": [
+            "Coming-of-Age",
+            "Drama",
+            "Romance"
+        ],
+        "directors": [
+            "Giuseppe Tornatore"
+        ],
+        "writers": [
+            "Writers",
+            "Giuseppe Tornatore",
+            "Vanna Paoli"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0095765/?ref_=chttp_i_46"
+    },
+    {
+        "title": " The Usual Suspects",
+        "year": "1995",
+        "duration": "1h 46m",
+        "rating": "8.5",
+        "genres": [
+            "Caper",
+            "Gangster",
+            "Heist",
+            "Psychological Drama",
+            "Psychological Thriller",
+            "Suspense Mystery",
+            "Whodunnit",
+            "Crime",
+            "Drama",
+            "Mystery"
+        ],
+        "directors": [
+            "Bryan Singer"
+        ],
+        "writers": [
+            "Christopher McQuarrie"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0114814/?ref_=chttp_i_47"
+    },
+    {
+        "title": " The Intouchables",
+        "year": "2011",
+        "duration": "1h 52m",
+        "rating": "8.5",
+        "genres": [
+            "Buddy Comedy",
+            "Docudrama",
+            "Comedy",
+            "Drama"
+        ],
+        "directors": [
+            "Olivier Nakache",
+            "\u00c9ric Toledano"
+        ],
+        "writers": [
+            "Olivier Nakache",
+            "\u00c9ric Toledano",
+            "Philippe Pozzo di Borgo"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt1675434/?ref_=chttp_i_48"
+    },
+    {
+        "title": " Alien",
+        "year": "1979",
+        "duration": "1h 57m",
+        "rating": "8.5",
+        "genres": [
+            "Alien Invasion",
+            "Body Horror",
+            "Cyberpunk",
+            "Monster Horror",
+            "Space Sci-Fi",
+            "Tragedy",
+            "Horror",
+            "Sci-Fi"
+        ],
+        "directors": [
+            "Ridley Scott"
+        ],
+        "writers": [
+            "Writers",
+            "Dan O'Bannon",
+            "Ronald Shusett"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0078748/?ref_=chttp_i_49"
+    },
+    {
+        "title": " Modern Times",
+        "year": "1936",
+        "duration": "1h 27m",
+        "rating": "8.5",
+        "genres": [
+            "Romantic Comedy",
+            "Satire",
+            "Slapstick",
+            "Comedy",
+            "Drama",
+            "Romance"
+        ],
+        "directors": [
+            "Charles Chaplin"
+        ],
+        "writers": [
+            "Charles Chaplin"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0027977/?ref_=chttp_i_50"
+    },
+    {
+        "title": " Rear Window",
+        "year": "1954",
+        "duration": "1h 52m",
+        "rating": "8.5",
+        "genres": [
+            "Psychological Thriller",
+            "Suspense Mystery",
+            "Drama",
+            "Mystery",
+            "Thriller"
+        ],
+        "directors": [
+            "Alfred Hitchcock"
+        ],
+        "writers": [
+            "John Michael Hayes",
+            "Cornell Woolrich"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0047396/?ref_=chttp_i_51"
+    },
+    {
+        "title": " Once Upon a Time in the West",
+        "year": "1968",
+        "duration": "2h 46m",
+        "rating": "8.5",
+        "genres": [
+            "Adventure Epic",
+            "Desert Adventure",
+            "Epic",
+            "Period Drama",
+            "Quest",
+            "Spaghetti Western",
+            "Western Epic",
+            "Drama",
+            "Western"
+        ],
+        "directors": [
+            "Sergio Leone"
+        ],
+        "writers": [
+            "Writers",
+            "Sergio Donati",
+            "Sergio Leone",
+            "Dario Argento"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0064116/?ref_=chttp_i_52"
+    },
+    {
+        "title": " Django Unchained",
+        "year": "2012",
+        "duration": "2h 45m",
+        "rating": "8.5",
+        "genres": [
+            "Dark Comedy",
+            "Epic",
+            "One-Person Army Action",
+            "Period Drama",
+            "Western Epic",
+            "Drama",
+            "Western"
+        ],
+        "directors": [
+            "Quentin Tarantino"
+        ],
+        "writers": [
+            "Quentin Tarantino"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt1853728/?ref_=chttp_i_53"
+    },
+    {
+        "title": " City Lights",
+        "year": "1931",
+        "duration": "1h 27m",
+        "rating": "8.5",
+        "genres": [
+            "Feel-Good Romance",
+            "Romantic Comedy",
+            "Satire",
+            "Slapstick",
+            "Comedy",
+            "Drama",
+            "Romance"
+        ],
+        "directors": [
+            "Charles Chaplin"
+        ],
+        "writers": [
+            "Charles Chaplin",
+            "Harry Carr",
+            "Harry Crocker"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0021749/?ref_=chttp_i_54"
+    },
+    {
+        "title": " Apocalypse Now",
+        "year": "1979",
+        "duration": "2h 27m",
+        "rating": "8.4",
+        "genres": [
+            "Adventure Epic",
+            "Epic",
+            "Hard-boiled Detective",
+            "Psychological Drama",
+            "Quest",
+            "Suspense Mystery",
+            "War Epic",
+            "Drama",
+            "Mystery",
+            "War"
+        ],
+        "directors": [
+            "Francis Ford Coppola"
+        ],
+        "writers": [
+            "Writers",
+            "John Milius",
+            "Francis Ford Coppola",
+            "Michael Herr"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0078788/?ref_=chttp_i_55"
+    },
+    {
+        "title": " WALL\u00b7E",
+        "year": "2008",
+        "duration": "1h 38m",
+        "rating": "8.4",
+        "genres": [
+            "Adventure Epic",
+            "Artificial Intelligence",
+            "Computer Animation",
+            "Dystopian Sci-Fi",
+            "Psychological Drama",
+            "Space Sci-Fi",
+            "Adventure",
+            "Animation",
+            "Family",
+            "Sci-Fi"
+        ],
+        "directors": [
+            "Andrew Stanton"
+        ],
+        "writers": [
+            "Writers",
+            "Andrew Stanton",
+            "Pete Docter",
+            "Jim Reardon"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0910970/?ref_=chttp_i_56"
+    },
+    {
+        "title": " Memento",
+        "year": "2000",
+        "duration": "1h 53m",
+        "rating": "8.4",
+        "genres": [
+            "Psychological Thriller",
+            "Suspense Mystery",
+            "Drama",
+            "Mystery",
+            "Thriller"
+        ],
+        "directors": [
+            "Christopher Nolan"
+        ],
+        "writers": [
+            "Christopher Nolan",
+            "Jonathan Nolan"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0209144/?ref_=chttp_i_57"
+    },
+    {
+        "title": " Dune: Part Two",
+        "year": "2024",
+        "duration": "2h 46m",
+        "rating": "8.5",
+        "genres": [
+            "Action Epic",
+            "Desert Adventure",
+            "Epic",
+            "Sci-Fi Epic",
+            "Space Sci-Fi",
+            "Action",
+            "Adventure",
+            "Drama",
+            "Sci-Fi"
+        ],
+        "directors": [
+            "Denis Villeneuve"
+        ],
+        "writers": [
+            "Denis Villeneuve",
+            "Jon Spaihts",
+            "Frank Herbert"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt15239678/?ref_=chttp_i_58"
+    },
+    {
+        "title": " Raiders of the Lost Ark",
+        "year": "1981",
+        "duration": "1h 55m",
+        "rating": "8.4",
+        "genres": [
+            "Adventure Epic",
+            "Desert Adventure",
+            "Globetrotting Adventure",
+            "Quest",
+            "Action",
+            "Adventure"
+        ],
+        "directors": [
+            "Steven Spielberg"
+        ],
+        "writers": [
+            "Lawrence Kasdan",
+            "George Lucas",
+            "Philip Kaufman"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0082971/?ref_=chttp_i_59"
+    },
+    {
+        "title": " Avengers: Infinity War",
+        "year": "2018",
+        "duration": "2h 29m",
+        "rating": "8.4",
+        "genres": [
+            "Space Sci-Fi",
+            "Superhero",
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+        ],
+        "directors": [
+            "Anthony Russo",
+            "Joe Russo"
+        ],
+        "writers": [
+            "Writers",
+            "Christopher Markus",
+            "Stephen McFeely",
+            "Stan Lee"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt4154756/?ref_=chttp_i_60"
+    },
+    {
+        "title": " The Lives of Others",
+        "year": "2006",
+        "duration": "2h 17m",
+        "rating": "8.4",
+        "genres": [
+            "Political Thriller",
+            "Psychological Drama",
+            "Spy",
+            "Drama",
+            "Mystery",
+            "Thriller"
+        ],
+        "directors": [
+            "Florian Henckel von Donnersmarck"
+        ],
+        "writers": [
+            "Florian Henckel von Donnersmarck"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0405094/?ref_=chttp_i_61"
+    },
+    {
+        "title": " Sunset Boulevard",
+        "year": "1950",
+        "duration": "1h 50m",
+        "rating": "8.4",
+        "genres": [
+            "Dark Comedy",
+            "Film Noir",
+            "Psychological Drama",
+            "Showbiz Drama",
+            "Tragedy",
+            "Drama"
+        ],
+        "directors": [
+            "Billy Wilder"
+        ],
+        "writers": [
+            "Charles Brackett",
+            "Billy Wilder",
+            "D.M. Marshman Jr."
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0043014/?ref_=chttp_i_62"
+    },
+    {
+        "title": " Spider-Man: Into the Spider-Verse",
+        "year": "2018",
+        "duration": "1h 57m",
+        "rating": "8.4",
+        "genres": [
+            "Coming-of-Age",
+            "Computer Animation",
+            "Quirky Comedy",
+            "Superhero",
+            "Supernatural Fantasy",
+            "Teen Adventure",
+            "Teen Comedy",
+            "Teen Drama",
+            "Urban Adventure",
+            "Action"
+        ],
+        "directors": [
+            "Bob Persichetti",
+            "Peter Ramsey",
+            "Rodney Rothman"
+        ],
+        "writers": [
+            "Writers",
+            "Phil Lord",
+            "Rodney Rothman"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt4633694/?ref_=chttp_i_63"
+    },
+    {
+        "title": " Witness for the Prosecution",
+        "year": "1957",
+        "duration": "1h 56m",
+        "rating": "8.4",
+        "genres": [
+            "Legal Drama",
+            "Legal Thriller",
+            "Whodunnit",
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Thriller"
+        ],
+        "directors": [
+            "Billy Wilder"
+        ],
+        "writers": [
+            "Writers",
+            "Agatha Christie",
+            "Billy Wilder",
+            "Harry Kurnitz"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0051201/?ref_=chttp_i_64"
+    },
+    {
+        "title": " Paths of Glory",
+        "year": "1957",
+        "duration": "1h 28m",
+        "rating": "8.4",
+        "genres": [
+            "Epic",
+            "Legal Drama",
+            "Period Drama",
+            "Political Drama",
+            "Psychological Drama",
+            "Tragedy",
+            "War Epic",
+            "Drama",
+            "War"
+        ],
+        "directors": [
+            "Stanley Kubrick"
+        ],
+        "writers": [
+            "Writers",
+            "Stanley Kubrick",
+            "Calder Willingham",
+            "Jim Thompson"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0050825/?ref_=chttp_i_65"
+    },
+    {
+        "title": " The Shining",
+        "year": "1980",
+        "duration": "2h 26m",
+        "rating": "8.4",
+        "genres": [
+            "Psychological Drama",
+            "Psychological Horror",
+            "Supernatural Horror",
+            "Drama",
+            "Horror"
+        ],
+        "directors": [
+            "Stanley Kubrick"
+        ],
+        "writers": [
+            "Stephen King",
+            "Stanley Kubrick",
+            "Diane Johnson"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0081505/?ref_=chttp_i_66"
+    },
+    {
+        "title": " The Great Dictator",
+        "year": "1940",
+        "duration": "2h 5m",
+        "rating": "8.4",
+        "genres": [
+            "Dark Comedy",
+            "Parody",
+            "Political Drama",
+            "Satire",
+            "Slapstick",
+            "Comedy",
+            "Drama",
+            "War"
+        ],
+        "directors": [
+            "Charles Chaplin"
+        ],
+        "writers": [
+            "Charles Chaplin"
+        ],
+        "actors": [],
+        "link": "https://www.imdb.com/title/tt0032553/?ref_=chttp_i_67"
+    }
+]

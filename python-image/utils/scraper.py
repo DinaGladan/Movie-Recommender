@@ -64,19 +64,20 @@ for movie in movies:
         # print(f"{movie_link}")
 
         # Provjeri postoji li već taj film
-        # try:
-        #     cur.execute(
-        #         """
-        #             SELECT id FROM movies
-        #             WHERE title = %s AND year = %s
-        #         """,
-        #         (movie_title, movie_year),
-        #     )
-        movie_result = None
-        # except Exception as e:
-        #     print(f"Greška kod SELECT movies: {e}")
-        #     conn.rollback()
-        #     continue
+        try:
+            cur.execute(
+                """
+                    SELECT id FROM movies
+                    WHERE title = %s AND year = %s
+                """,
+                (movie_title, movie_year),
+            )
+            movie_result = cur.fetchone()
+
+        except Exception as e:
+            print(f"Greška kod SELECT movies: {e}")
+            conn.rollback()
+            continue
 
         driver.execute_script("window.open('');")  # otvori novi prozor
         driver.switch_to.window(driver.window_handles[1])  # prebaci se na njega
@@ -106,13 +107,20 @@ for movie in movies:
         print(f"Number of critic reviews: {number_of_critic_reviews}")
         time.sleep(1)
 
+        nominations_and_awards = driver.find_element(
+            By.XPATH,
+            "//li[@data-testid='award_information']//a[contains(@href, 'awards')]",
+        ).text.strip()
+        print(f"Nominations and awards: {nominations_and_awards}")
+        time.sleep(1)
+
         if movie_result is None:
             # ne postoji pa ga unesi
             # mislim da se ode lomi
             cur.execute(
                 """
-                    INSERT INTO movies (title, year, duration, rating, content_rating, number_of_users_reviews, number_of_critic_reviews)
-                    VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id
+                    INSERT INTO movies (title, year, duration, rating, content_rating, number_of_users_reviews, number_of_critic_reviews, nominations_and_awards)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s) RETURNING id
                 """,
                 (
                     movie_title,
@@ -122,26 +130,11 @@ for movie in movies:
                     content_rating,
                     number_of_users_reviews,
                     number_of_critic_reviews,
+                    nominations_and_awards,
                 ),
             )
             movie_id = cur.fetchone()[0]
-        else:
-            movie_id = movie_result[0]
-            cur.execute(
-                """
-                UPDATE movies
-                SET content_rating = %s,
-                    number_of_users_reviews = %s,
-                    number_of_critic_reviews = %s
-                WHERE id = %s
-                """,
-                (
-                    content_rating,
-                    number_of_users_reviews,
-                    number_of_critic_reviews,
-                    movie_id,
-                ),
-            )
+            time.sleep(1)
 
         # genre_elements = driver.find_elements(By.CSS_SELECTOR, "span.ipc-chip__text")
         # detaljnije

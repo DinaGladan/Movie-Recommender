@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS movies (
     content_rating VARCHAR(10),
     number_of_users_reviews VARCHAR(20),
     number_of_critic_reviews VARCHAR(20),
+    nominations_and_awards VARCHAR(50)
 );
 
 CREATE TABLE IF NOT EXISTS genres (
