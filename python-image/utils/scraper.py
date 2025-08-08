@@ -47,7 +47,13 @@ cur = conn.cursor()
 movies = driver.find_elements(By.CSS_SELECTOR, "li.ipc-metadata-list-summary-item")
 movies_data = []
 # print(f"Br pronadjenih {len(movies)}")
-for movie in movies:
+for idx, movie in enumerate(movies):
+
+    # if 218 < idx or idx < 214:
+    #     continue
+
+    print(f"\n Obrada {idx+1}. filma")
+
     try:
         # print("Uslo")
         title_with_rank = movie.find_element(By.CSS_SELECTOR, "h3.ipc-title__text").text
@@ -83,34 +89,51 @@ for movie in movies:
         driver.switch_to.window(driver.window_handles[1])  # prebaci se na njega
         driver.get(movie_link)  # otvori stranicu filma u njemu
         time.sleep(2)
-
-        rating_element = driver.find_element(
-            # ???
+        # ako podatak ne postoji
+        # find_element baca gresku seleniumu
+        # find_elements vraca praznu listu
+        rating_element = driver.find_elements(
             By.XPATH,
             "//li[@class='ipc-inline-list__item']/a[contains(@href, 'parental')]",
         )
-        content_rating = rating_element.text.strip()
+        if rating_element:
+            content_rating = rating_element[0].text.strip()
+        else:
+            content_rating = "None"
         time.sleep(1)
         print(content_rating)
 
-        number_of_users_reviews = driver.find_element(
+        users_reviews = driver.find_elements(
             By.XPATH,
             "//span[@class='label' and contains(text(), 'User reviews')]/preceding-sibling::span[@class='score']",
-        ).text.strip()
+        )
+        if users_reviews:
+            number_of_users_reviews = users_reviews[0].text.strip()
+        else:
+            number_of_users_reviews = "None"
         print(f"Number of users reviews: {number_of_users_reviews}")
         time.sleep(1)
 
-        number_of_critic_reviews = driver.find_element(
+        critic_reviews = driver.find_elements(
             By.XPATH,
             "//span[@class='label' and contains(text(), 'Critic reviews')]/preceding-sibling::span[@class='score']",
-        ).text.strip()
+        )
+        if critic_reviews:
+            number_of_critic_reviews = critic_reviews[0].text.strip()
+        else:
+            number_of_critic_reviews = "None"
         print(f"Number of critic reviews: {number_of_critic_reviews}")
         time.sleep(1)
 
-        nominations_and_awards = driver.find_element(
+        oscar_nominations_and_awards = driver.find_elements(
             By.XPATH,
             "//li[@data-testid='award_information']//a[contains(@href, 'awards')]",
-        ).text.strip()
+        )
+        if oscar_nominations_and_awards:
+            text = oscar_nominations_and_awards[0].text.strip()
+            nominations_and_awards = text if text else "No Oscars"
+        else:
+            nominations_and_awards = "No Oscars"
         print(f"Nominations and awards: {nominations_and_awards}")
         time.sleep(1)
 
