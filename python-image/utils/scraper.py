@@ -17,12 +17,17 @@
 import time
 import json
 import traceback
+import re
+import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from utils.db import get_db_connection, close_db_connection
 
+TMDB_API_KEY = (
+    "a5912e9d93f3ab3d10f2b48de0f2dc91"  # registracijom u tmdb daju besplatni api kljuc
+)
 
 chrome_options = Options()
 chrome_options.add_argument("--headless")  # VAŽNO: pokrece Chrom bez GUI prozora
@@ -41,7 +46,108 @@ conn = get_db_connection()
 cur = conn.cursor()
 
 
-def scrape_movie(movie_link):
+def scrape_tmdb(tmdb_id):
+    """Uzmi podatke s TMDB API-ja"""
+    url = f"https://api.themoviedb.org/3/movie/{tmdb_id}?api_key={TMDB_API_KEY}&language=en-US"
+    r = requests.get(url)
+    if r.status_code != 200:
+        return {}
+    data = r.json()
+    return {
+        "tmdb_id": tmdb_id,
+        "tmdb_audience_rating": data.get("vote_average"),
+        "popularity": data.get("popularity"),
+        "vote_count_tmdb": data.get("vote_count"),
+        "adult": data.get("adult"),
+        "original_language": data.get("original_language"),
+        "release_date": data.get("release_date"),
+        "countries": ", ".join(
+            [c["name"] for c in data.get("production_countries", [])]
+        ),
+        "studio": (
+            data["production_companies"][0]["name"]
+            if data.get("production_companies")
+            else None
+        ),
+    }
+
+
+def scrape_rottentomatoes(rt_url):
+    """Uzmi critic i audience score s RottenTomatoes"""
+    driver.get(rt_url)
+    time.sleep(2)
+    try:
+        critic = driver.find_element(By.CSS_SELECTOR, "score-board").get_attribute(
+            "tomatometerscore"
+        )
+    except:
+        critic = None
+    try:
+        audience = driver.find_element(By.CSS_SELECTOR, "score-board").get_attribute(
+            "audiencescore"
+        )
+    except:
+        audience = None
+    return {
+        "rt_critic_rating": critic,
+        "rt_audience_rating": audience,
+    }
+
+
+def scrape_letterboxd(lb_url):
+    """Uzmi user rating s Letterboxda"""
+    driver.get(lb_url)
+    time.sleep(2)
+    try:
+        rating = driver.find_element(By.CSS_SELECTOR, "span.average-rating").text
+    except:
+        rating = None
+    return {"user_rating": rating}
+
+
+def scrape_imdb(imdb_url, imdb_id):
+    """Izvuci IMDb podatke kao do sad + dodaci"""
+    driver.get(imdb_url)
+    time.sleep(2)
+    data = {"imdb_id": imdb_id}
+
+    try:
+        data["duration"] = driver.find_element(
+            By.CSS_SELECTOR, "li[data-testid='title-techspec_runtime'] div"
+        ).text
+    except:
+        data["duration"] = None
+
+    try:
+        data["rating"] = driver.find_element(
+            By.CSS_SELECTOR,
+            "div[data-testid='hero-rating-bar__aggregate-rating__score'] span",
+        ).text
+    except:
+        data["rating"] = None
+
+    try:
+        countries = driver.find_elements(
+            By.XPATH, "//li[@data-testid='title-details-origin']//a"
+        )
+        data["countries"] = (
+            ", ".join([c.text for c in countries]) if countries else None
+        )
+    except:
+        data["countries"] = None
+
+    try:
+        studio = driver.find_element(
+            By.XPATH, "//li[@data-testid='title-details-companies']//a"
+        ).text
+        data["studio"] = studio
+    except:
+        data["studio"] = None
+
+    return data
+
+
+def scrape_movie(movie_link, tmdb_url=None, rt_url=None, lb_url=None):
     try:
         main_window = driver.current_window_handle
         driver.execute_script("window.open('');")  # otvori novi prozor
@@ -340,9 +446,56 @@ def scrape_movie(movie_link):
                         if len(driver.window_handles) > 2:
                             driver.close()
                             driver.switch_to.window(new_window)
-
                         continue
                 conn.commit()
+                extra_data = {}
+                if tmdb_url:
+                    match = re.search(r"/movie/(\d+)", tmdb_url)
+                    if match:
+                        tmdb_id = match.group(1)
+                        extra_data.update(scrape_tmdb(tmdb_id))
+                        extra_data["tmdb_id"] = tmdb_id
+
+                if rt_url:
+                    extra_data.update(scrape_rottentomatoes(rt_url))
+                if lb_url:
+                    extra_data.update(scrape_letterboxd(lb_url))
+
+                if extra_data:
+                    cur.execute(
+                        """
+                        UPDATE movies
+                        SET tmdb_id=%s,
+                            tmdb_audience_rating=%s,
+                            popularity=%s,
+                            vote_count_tmdb=%s,
+                            adult=%s,
+                            original_language=%s,
+                            release_date=%s,
+                            countries=%s,
+                            studio=%s,
+                            rt_critic_rating=%s,
+                            rt_audience_rating=%s,
+                            user_rating=%s
+                        WHERE id=%s
+                    """,
+                        (
+                            extra_data.get("tmdb_id"),
+                            extra_data.get("tmdb_audience_rating"),
+                            extra_data.get("popularity"),
+                            extra_data.get("vote_count_tmdb"),
+                            extra_data.get("adult"),
+                            extra_data.get("original_language"),
+                            extra_data.get("release_date"),
+                            extra_data.get("countries"),
+                            extra_data.get("studio"),
+                            extra_data.get("rt_critic_rating"),
+                            extra_data.get("rt_audience_rating"),
+                            extra_data.get("user_rating"),
+                            movie_id,
+                        ),
+                    )
+                    conn.commit()
             else:
                 print(f"Movie already exists: {title} ({year})")
         except Exception as err:

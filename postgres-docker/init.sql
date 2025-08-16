@@ -10,6 +10,22 @@ CREATE TABLE IF NOT EXISTS movies (
     nominations_and_awards VARCHAR(50)
 );
 
+ALTER TABLE movies
+ADD COLUMN imdb_id VARCHAR(20),
+ADD COLUMN tmdb_id VARCHAR(20),
+ADD COLUMN countries VARCHAR(255),
+ADD COLUMN studio VARCHAR(255),
+ADD COLUMN rt_critic_rating VARCHAR(10),
+ADD COLUMN rt_audience_rating VARCHAR(10),
+ADD COLUMN tmdb_audience_rating VARCHAR(10),
+ADD COLUMN user_rating VARCHAR(10),
+ADD COLUMN adult BOOLEAN,
+ADD COLUMN original_language VARCHAR(10),
+ADD COLUMN popularity VARCHAR(20),
+ADD COLUMN release_date VARCHAR(20),
+ADD COLUMN vote_count_tmdb VARCHAR(20);
+
+
 CREATE TABLE IF NOT EXISTS genres (
     id SERIAL PRIMARY KEY,
     genre TEXT
